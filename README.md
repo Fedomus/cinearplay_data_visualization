@@ -1,4 +1,6 @@
-# cinearplay_data_visualization
-A simple data visualization using Python, Pandas and Streamlit. 
+# Visualizador de datos de Ciner.ar Play
 
-https://fedomus-cinearplay-data-visualization-main-nuziwz.streamlit.app/
+Aplicación web generada con Streamlit y Python que permite visualizar datos 
+Las visualizaciones se hicieron con la librería Pandas 
+
+url: https://fedomus-cinearplay-data-visualization-main-nuziwz.streamlit.app/
