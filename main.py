@@ -41,26 +41,31 @@ def load_data_horas():
     return data
 
 
+
+try: 
+    data_load_state = st.text('Cargando los datos...')
+
+    data = load_data()
+    usuarios_data = load_data_usuarios()
+    usuarios_nuevos = load_data_usuarios_nuevo()
+    horas = load_data_horas()
     
-data_load_state = st.text('Cargando la data...')
+    data_load_state.text("Los datos fueron cargados con éxito!")
 
-data = load_data()
-usuarios_data = load_data_usuarios()
-usuarios_nuevos = load_data_usuarios_nuevo()
-horas = load_data_horas()
+    st.title('Cine.ar Play Data')
+    
+    st.subheader('Visualizaciones totales en el tiempo')
+    st.line_chart(data=data, x='indice_tiempo', y='visualizaciones_totales', width=0, height=0, use_container_width=True)
+    
+    st.subheader('Cantidad de usuarios unicos con visualizaciones en el tiempo')
+    st.line_chart(data=usuarios_data, x='indice_tiempo', y='usuarios_unicos_con_visualizaciones', width=0, height=0, use_container_width=True)
+    
+    st.subheader('Nuevos usuarios por mes')
+    st.line_chart(data=usuarios_nuevos, x='indice_tiempo', y='nuevos_usuarios_por_mes_registrados', width=0, height=0, use_container_width=True)
+    
+    st.subheader('Horas vistas en el tiempo')
+    st.line_chart(data=horas, x='indice_tiempo', y='total_horas_vistas', width=0, height=0, use_container_width=True)
 
-data_load_state.text("La data fue cargada con éxito!")
-
-st.title('Cine.ar Play Data')
-
-st.subheader('Visualizaciones totales en el tiempo')
-st.line_chart(data=data, x='indice_tiempo', y='visualizaciones_totales', width=0, height=0, use_container_width=True)
-
-st.subheader('Cantidad de usuarios unicos con visualizaciones en el tiempo')
-st.line_chart(data=usuarios_data, x='indice_tiempo', y='usuarios_unicos_con_visualizaciones', width=0, height=0, use_container_width=True)
-
-st.subheader('Nuevos usuarios por mes')
-st.line_chart(data=usuarios_nuevos, x='indice_tiempo', y='nuevos_usuarios_por_mes_registrados', width=0, height=0, use_container_width=True)
-
-st.subheader('Horas vistas en el tiempo')
-st.line_chart(data=horas, x='indice_tiempo', y='total_horas_vistas', width=0, height=0, use_container_width=True)
+except:
+     data_load_state.text("Lo sentimos, ocurrió un error el intentar cargar los datos.")
+    
