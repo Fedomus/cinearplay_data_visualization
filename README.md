@@ -1,11 +1,11 @@
 # Visualizador de datos de Ciner.ar Play
 
-Aplicación web generada con Streamlit que permite visualizar datos en la nube de forma extremadamente sencilla.
+### Visualizaciones en tiempo real de datos publicados en el portal datos.gob.ar 
 
-url: https://fedomus-cinearplay-data-visualization-main-nuziwz.streamlit.app/
+Link a la fuente: [https://datos.gob.ar/dataset/arsat-cinear-play](https://datos.gob.ar/dataset/arsat-cinear-play)
 
-La extracción y transformación de los datos se hicieron con Pandas, sobre la base de los datos publicados en el portal de datos abiertos de Argentina.
+Las visualizaciones se publican en sitio web generado con Streamlit. Link del sitio web: [https://fedomus-cinearplay-data-visualization-main-nuziwz.streamlit.app/](https://fedomus-cinearplay-data-visualization-main-nuziwz.streamlit.app/)
 
-Las visualizaciones también se hicieron con Streamlit. Se emplearon gráficos de línea donde el eje x representa siempre la evolución en el tiempo y el eje las distintas variables que permiten medir el nivel de consumo de la plataforma cinear play https://play.cine.ar 
+Se emplean gráficos de línea temporal donde el eje X representa siempre la evolución en el tiempo y el eje Y las distintas variables que permiten medir el nivel de consumo de la plataforma [cinear play](https://play.cine.ar)
 
 
